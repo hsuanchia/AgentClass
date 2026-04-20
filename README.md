@@ -6,7 +6,7 @@ Multi-Agent Social Simulation System
 > Ref: [Out of One, Many: Using Language Models to Simulate Human Samples](https://arxiv.org/abs/2209.06899)
 
 # Current
-* LLM: QWEN-7B by Ollama-> 在我的 RTX 3060 GPU 勉強能跑(大約需要5.4G左右的獨顯記憶體)
+* LLM: QWEN-7B by Ollama-> 在我的 RTX 3060 Laptop GPU 勉強能跑(大約需要5.4G左右的獨顯記憶體)
 * 用Langgraph架起來了，初步可以互相聊天，但整體過程還需要優化
 
 # To Do
@@ -18,4 +18,12 @@ Multi-Agent Social Simulation System
     * 用資料庫儲存? -> 那是不是personality也要用DB存比較好
     * 有些過往記憶應該要遺忘 -> 如何決定?
 * 人設必須要更詳細
+    * 人設, Prompt這類的東西應該要額外切出來開一個檔案儲存，不要都塞在code裡面
+* 也可以試試看能否接近去Discord -> 比如說創一個server讓他們在裡面大亂鬥XD
 * 最後再包上FastAPI+React
+# Package version
+```bash
+python==3.10.20
+ollama==0.6.1
+langgraph==1.1.8
+```
