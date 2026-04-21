@@ -17,8 +17,7 @@ Multi-Agent Social Simulation System
 * 每個人的memory處理
     * 用資料庫儲存? -> 那是不是personality也要用DB存比較好
     * 有些過往記憶應該要遺忘 -> 如何決定?
-* 人設必須要更詳細
-    * 人設, Prompt這類的東西應該要額外切出來開一個檔案儲存，不要都塞在code裡面
+* 人設和prompt必須要更詳細
 * 也可以試試看能否接近去Discord -> 比如說創一個server讓他們在裡面大亂鬥XD
 * 最後再包上FastAPI+React
 # Package version
