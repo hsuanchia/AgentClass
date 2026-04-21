@@ -7,6 +7,7 @@ Multi-Agent Social Simulation System
 
 # Current
 * LLM: QWEN-7B by Ollama-> 在我的 RTX 3060 Laptop GPU 勉強能跑(大約需要5.4G左右的獨顯記憶體)
+    * 改用qwen2.5:7b-instruct -> 輸出結果比qwen:7b穩定很多
 * 用Langgraph架起來了，初步可以互相聊天，但整體過程還需要優化
 
 # To Do
@@ -18,7 +19,7 @@ Multi-Agent Social Simulation System
     * 用資料庫儲存? -> 那是不是personality也要用DB存比較好
     * 有些過往記憶應該要遺忘 -> 如何決定?
 * 人設和prompt必須要更詳細
-* 也可以試試看能否接近去Discord -> 比如說創一個server讓他們在裡面大亂鬥XD
+* 也可以試試看能否接進去Discord -> 比如說創一個server讓他們在裡面大亂鬥XD
 * 最後再包上FastAPI+React
 # Package version
 ```bash

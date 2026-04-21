@@ -67,7 +67,7 @@ def generate_question(state: State):
 """
 
     res = client.chat(
-        model="qwen:7b",
+        model="qwen2.5:7b-instruct",
         messages=[
             {"role": "system", "content": question_prompt},
             {"role": "user", "content": prompt}
@@ -109,7 +109,7 @@ def generate_answer(state: State):
 """
 
     res = client.chat(
-        model="qwen:7b",
+        model="qwen2.5:7b-instruct",
         messages=[
             {"role": "system", "content": answer_prompt},
             {"role": "user", "content": prompt}
@@ -152,7 +152,7 @@ def update_memory(state: State):
 # =========================
 
 def should_continue(state: State):
-    if state["time"] >= 10:
+    if state["time"] >= 50:
         return END
     return "select_pair"
 
