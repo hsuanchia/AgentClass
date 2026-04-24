@@ -8,19 +8,20 @@ Multi-Agent Social Simulation System
 # Current
 * LLM: QWEN-7B by Ollama-> 在我的 RTX 3060 Laptop GPU 勉強能跑(大約需要5.4G左右的獨顯記憶體)
     * 改用qwen2.5:7b-instruct -> 輸出結果比qwen:7b穩定很多
-* 用Langgraph架起來了，初步可以互相聊天，但整體過程還需要優化
+* 用Langgraph架起來了，設定好整體目標與流程
+    * 給定人設以及討論目標
+    * 初步希望agents之間互相討論5輪，每一輪由他們自己決定何時該終止討論
+    * 目前模擬: 教授與研究生
+        * 教授任務: 追蹤與推進每個研究生進度、主持每次會議
+        * 研究生任務: 回應教授並推進自己研究進度
 
 # To Do
-* LangGraph整體流程優化
-    * 互動更多
-    * 狀態更新
-    * Special event
 * 每個人的memory處理
-    * 用資料庫儲存? -> 那是不是personality也要用DB存比較好
-    * 有些過往記憶應該要遺忘 -> 如何決定?
-* 人設和prompt必須要更詳細
-* 也可以試試看能否接進去Discord -> 比如說創一個server讓他們在裡面大亂鬥XD
+    * 用資料庫儲存(MongoDB)
+    * 過往記憶應該要遺忘 -> 可以用摘要壓縮!! -> 每對話過幾輪之後，將先前的對話做個summary然後再儲存
+* 人設和prompt必須要更詳細 -> 目前先用AI幫我生成
 * 最後再包上FastAPI+React
+
 # Package version
 ```bash
 python==3.10.20
